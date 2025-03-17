@@ -65,6 +65,7 @@ There is no affiliation or endorsement from the FastAPI project authors to this 
 8. **GitHub Runner Registration**: Navigate to your GitHub repository: Settings -> Actions -> Runners. Click "New self-hosted Runner" to generate a token.
 ![Github Runner Token on UI](img/github_runner_token.png)
 9. **Token Configuration**: Input the GitHub token into the `github_token` variable. Ignore the other commands on that page as this project automates them.
+10. **AMI ID**: Enter the `ami_id` variable with the appropriate value for your aws region. The project has been tested with the 'Amazon Linux 2023 AMI 2023.6.20250218.2 x86_64 HVM kernel-6.1', but most 'Amazon Linux 2023" AMIs should work. 
 10. **Traefik Variables**: Configure Traefik variables by following [these instructions](https://github.com/tiangolo/full-stack-fastapi-postgresql/blob/master/deployment.md). If `traefik_docker_compose_path` is unset or empty, the Traefik integration will be disabled.
    When used, the `traefik_docker_compose_path` should point to the "docker-compose.traefik.yml" from a project based on the FastAPI template project (https://github.com/fastapi/full-stack-fastapi-template).
    With small changes, this variable could point to any docker-compose yml file that need to de deployed to the EC2 docker-compose instance before the github actions are triggered.
