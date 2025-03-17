@@ -76,8 +76,11 @@ There is no affiliation or endorsement from the FastAPI project authors to this 
 To verify a successful installation:
 
 1. Confirm a new GitHub runner is registered and active.
+   ![github runner registered](img/github_runner_registered.png)
 2. Use AWS EC2 Connect to log into the instance and execute `docker version`.
+   ![EC2 Instance Connect on AWS](img/ec2_instance_connect.png)
 3. Run `docker compose version` to confirm Docker Compose is installed.
+   ![docker compose version on AWS](img/docker_compose_version.png)
 
 ### Troubleshooting
 
