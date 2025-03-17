@@ -1,0 +1,20 @@
+domain_name                 = "mydomain.com"
+cloudflare_api_token        = "ABCDEF1234567890absdef1234567890ABCDEFGH"
+cloudflare_zone_id          = "abcdefgh1234567890abcdefhh123457"
+
+aws_region                  = "us-west-1"
+aws_profile                 = "myawsprofile"
+project_name                = "myproject"
+max_spot_price              = 0.07
+instance_type               = "t2.large"
+ami_id                      = "ami-01234567890sbcd01"
+github_repo_url             = "https://github.com/myuser/myproject"
+github_token                = "AAAAAAAAAAAAAAAAA"
+key_name                    = "my_aws_keypair"
+private_key_path            = "/home/mylocaluser/.ssh/my_aws_keypair.pem"
+# Comment the lines below if not using it with full-stack-fastapi-template
+traefik_docker_compose_path = "/home/mylocaluser/workspaces/full-stack-fastapi-template/docker-compose.traefik.yml"
+traefik_user_env            = "traefikuser"
+traefik_password_env        = "traefikpass!13579"
+traefik_hashed_password_env = "output of command like: openssl passwd -apr1 $traefik_password_env"
+traefik_email_env           = "mysysadmin@mydomain.com"
