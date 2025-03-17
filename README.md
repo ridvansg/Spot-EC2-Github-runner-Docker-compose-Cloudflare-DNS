@@ -36,7 +36,7 @@ There is no affiliation or endorsement from the FastAPI project authors to this 
 
 ## Quick Start
 
-1. **Copy the Template**: Copy the `variables.auto.tfvars.template` into `variables.auto.tfvars`.
+1. **Copy the Variables Template**: Copy the `variables.auto.tfvars.template` into `variables.auto.tfvars`.
 2. **Provide Values**: Fill in the necessary values for the variables in `variables.auto.tfvars`.
 3. **Initialize Terraform**: Run `terraform init` to initialize the Terraform working directory.
 4. **Apply Configuration**: Execute `terraform apply` to create the resources defined in the configuration.
