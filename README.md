@@ -26,9 +26,11 @@ The project automates the following steps:
 - Docker Compose setup
 - Docker Compose configuration
 
-Optionally the project supports Traefik setup on the docker-compose for reverse proxying and load balancing.
+Optionally the project supports traefik setup on the docker-compose for reverse proxying and load balancing, like deploying the docker-compose.traefik.yml from the "FastAPI Template" project.
+Or any other custom docker-compose yml file might be used, instead the docker-compose.traefik.yml, to setup anythng that is needed prior the github actions run. 
 
-This project was developed initially as a helper tool while deploying a custom project based on the FastAPI template, but it is not related in any way with the FastAPI authors.
+Please notice that this project is independent and only references the FastAPI Template for integration purposes.
+There is no affiliation or endorsement from the FastAPI project authors to this project.
 
 
 
