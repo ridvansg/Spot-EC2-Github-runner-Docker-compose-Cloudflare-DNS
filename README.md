@@ -27,7 +27,7 @@ The project automates the following steps:
 - Docker Compose configuration
 
 Optionally the project supports traefik setup on the docker-compose for reverse proxying and load balancing, like deploying the docker-compose.traefik.yml from the "FastAPI Template" project.
-Or any other custom docker-compose yml file might be used, instead the docker-compose.traefik.yml, to setup anythng that is needed prior the github actions run. 
+Or any other custom docker-compose yml file might be used instead the docker-compose.traefik.yml, to setup anythng that is needed prior the github actions run. 
 
 Please notice that this project is independent and only references the FastAPI Template for integration purposes.
 There is no affiliation or endorsement from the FastAPI project authors to this project.
@@ -57,17 +57,17 @@ There is no affiliation or endorsement from the FastAPI project authors to this 
 2. **Domain Name Configuration**: Fill in the `domain_name` variable with your registered domain above.
 3. **Cloudflare Token**: Create a Cloudflare API token with necessary permissions: All zones - Zone:Read, Page Rules:Edit, DNS:Edit. Use 'Client IP Address Filtering' for enhanced security.
 ![Cloudflare Token on UI](img/cloudflare_token.png)
-4. **Token Setup**: Set this token in the `cloudflare_api_token` variable.
-5. **Cloudflare Zone ID**: Enter the `cloudflare_zone_id` variable. Use the Cloudflare UI to find this ID.
+4. **Token Setup**: Set the above token in the `cloudflare_api_token` variable.
+5. **Cloudflare Zone ID**: Enter the `cloudflare_zone_id` variable. Use the Cloudflare UI to find it.
 ![Cloudflare Zone ID on UI](img/cloudflare_zone_id.png)
 6. **AWS CLI Profile**: Establish an AWS CLI profile as guided [here](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/configure/index.html).
 7. **AWS Key Pair**: Generate an AWS key pair in your target `aws_region`, and download the `.pem` file.
 8. **GitHub Runner Registration**: Navigate to your GitHub repository: Settings -> Actions -> Runners. Click "New self-hosted Runner" to generate a token.
 ![Github Runner Token on UI](img/github_runner_token.png)
-9. **Token Configuration**: Input the GitHub token into the `github_token` variable. Ignore any instructions GitHub provides here as this project automates those steps.
+9. **Token Configuration**: Input the GitHub token into the `github_token` variable. Ignore the other commands on that page as this project automates them.
 10. **Traefik Variables**: Configure Traefik variables by following [these instructions](https://github.com/tiangolo/full-stack-fastapi-postgresql/blob/master/deployment.md). If `traefik_docker_compose_path` is unset or empty, the Traefik integration will be disabled.
    When used, the `traefik_docker_compose_path` should point to the "docker-compose.traefik.yml" from a project based on the FastAPI template project (https://github.com/fastapi/full-stack-fastapi-template).
-   With small changes, this variable could point to any docker-compose yml file that need to de deployed to the github runner instance before the github actions are triggered.
+   With small changes, this variable could point to any docker-compose yml file that need to de deployed to the EC2 docker-compose instance before the github actions are triggered.
 11. **Initialization**: Run `terraform init`.
 12. **Deployment**: Run `terraform apply`.
 
