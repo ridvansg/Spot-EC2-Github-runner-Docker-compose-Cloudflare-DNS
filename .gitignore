@@ -5,18 +5,11 @@ venv
 *.patch
 node_modules/
 /test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
 
 ### Terraform ignore START###
 # Local .terraform directories
 **/.terraform/*
 .terraform.lock.hcl
-
-**/terra*/release/*
-nametest.zip
-
 # .tfstate files
 *.tfstate
 *.tfstate.*
@@ -53,5 +46,3 @@ terraform.rc
 environment.json
 env.tf
 ### Terraform ignore END###
-
-.qodo
